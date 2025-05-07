@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Press+Start+2P&display=swap');
+
+:root {
+    --color-dark-bg: #1a1a1a;
+    --color-dark-text: #fff;
+    --color-dark-accent1: #ff0090;
+    --color-dark-accent2: #00c8ff;
+    --color-light-bg: #f0f0f0;
+    --color-light-text: #1a1a1a;
+    --color-light-accent1: #e6007e;
+    --color-light-accent2: #0099cc;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Orbitron', 'Arial', sans-serif;
+    background-color: var(--color-dark-bg);
+    color: var(--color-dark-text);
+    transition: background-color 0.5s ease, color 0.5s ease;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 600px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body.light-mode {
+    background-color: var(--color-light-bg);
+    color: var(--color-light-text);
+}
+
+header {
+    text-align: center;
+    padding: 20px 15px;
+    background: linear-gradient(90deg, var(--color-dark-accent1), var(--color-dark-accent2));
+    color: var(--color-dark-text);
+    box-shadow: 0 0 8px var(--color-dark-accent1), 0 0 16px var(--color-dark-accent2);
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+body.light-mode header {
+    background: linear-gradient(90deg, var(--color-light-accent1), var(--color-light-accent2));
+    color: var(--color-light-text);
+    box-shadow: 0 0 8px var(--color-light-accent1), 0 0 16px var(--color-light-accent2);
+}
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.8rem;
+    margin: 0;
+    letter-spacing: 0.15em;
+    text-shadow:
+        0 0 8px var(--color-dark-accent1),
+        0 0 12px var(--color-dark-accent2);
+}
+
+body.light-mode h1 {
+    text-shadow:
+        0 0 8px var(--color-light-accent1),
+        0 0 12px var(--color-light-accent2);
+}
+
+h2 {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-top: 1.2em;
+    margin-bottom: 0.8em;
+    border-bottom: 2px solid var(--color-dark-accent1);
+    padding-bottom: 4px;
+    text-transform: uppercase;
+    text-shadow:
+        0 0 6px var(--color-dark-accent1);
+}
+
+body.light-mode h2 {
+    border-bottom-color: var(--color-light-accent1);
+    text-shadow: 0 0 6px var(--color-light-accent1);
+}
+
+.section {
+    padding: 0 15px 20px 15px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: inherit;
+}
+
+a {
+    color: var(--color-dark-accent2);
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+    color: var(--color-dark-accent1);
+    outline: none;
+}
+
+body.light-mode a {
+    color: var(--color-light-accent2);
+}
+
+body.light-mode a:hover,
+body.light-mode a:focus {
+    color: var(--color-light-accent1);
+}
+
+img.profile {
+    display: block;
+    margin: 0 auto 15px auto;
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border: 2px solid var(--color-dark-accent1);
+    box-shadow:
+        0 0 10px var(--color-dark-accent1),
+        0 0 20px var(--color-dark-accent2);
+    transition: border-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+body.light-mode img.profile {
+    border-color: var(--color-light-accent1);
+    box-shadow:
+        0 0 10px var(--color-light-accent1),
+        0 0 20px var(--color-light-accent2);
+}
+
+ul.skills-list,
+ul.skills-list li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ul.skills-list li {
+    display: inline-block;
+    background: var(--color-dark-accent1);
+    color: var(--color-dark-text);
+    padding: 6px 12px;
+    margin: 4px 6px 4px 0;
+    border-radius: 14px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    box-shadow:
+        0 0 8px var(--color-dark-accent1);
+    user-select: none;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+body.light-mode ul.skills-list li {
+    background: var(--color-light-accent1);
+    color: var(--color-light-text);
+    box-shadow:
+        0 0 8px var(--color-light-accent1);
+}
+
+/* Scrollbar styling, to fit cyberpunk aesthetic */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-dark-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-dark-accent1);
+    border-radius: 8px;
+    box-shadow: 0 0 8px var(--color-dark-accent1);
+}
+
+body.light-mode ::-webkit-scrollbar-track {
+    background: var(--color-light-bg);
+}
+
+body.light-mode ::-webkit-scrollbar-thumb {
+    background: var(--color-light-accent1);
+    box-shadow: 0 0 8px var(--color-light-accent1);
+}
+
+/* Toggle Button */
+button.toggle-mode {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background-color: var(--color-dark-accent1);
+    border: none;
+    color: var(--color-dark-text);
+    padding: 10px 16px;
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow:
+        0 0 12px var(--color-dark-accent1),
+        0 0 18px var(--color-dark-accent2);
+    transition: background-color 0.5s ease, color 0.5s ease;
+    user-select: none;
+    z-index: 100;
+}
+
+body.light-mode button.toggle-mode {
+    background-color: var(--color-light-accent1);
+    color: var(--color-light-text);
+    box-shadow:
+        0 0 12px var(--color-light-accent1),
+        0 0 18px var(--color-light-accent2);
+}
+
+button.toggle-mode:focus {
+    outline: 2px solid #00ffff;
+    outline-offset: 2px;
+}
